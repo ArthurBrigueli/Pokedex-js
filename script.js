@@ -8,13 +8,27 @@ const botao_mais = document.querySelector('.button-mais')
 let click = 0
 
 
+
 const getPokemon = async(pokemon) => {
     const apiURL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-    const res = await fetch(apiURL)
-    const data = await res.json()
-    return data
     
+    const res = await fetch(apiURL)
+    
+    if(res.status === 404){
+        nome_pokemon.innerHTML ='Invalido'
+        img.src = 'https://acegif.com/wp-content/uploads/gif/thinking-emoji-30.gif'
+        id_pokemon.innerHTML = 0
+        click = 0
+    }
+
+    const data = await res.json()
+    
+    return data
+        
 }
+
+
+
 
 
 
@@ -29,6 +43,7 @@ const showData = async (pokemon) => {
     const pokeimg = `${data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']}`
     img.src = pokeimg
 }
+
 
 showData(1)
 

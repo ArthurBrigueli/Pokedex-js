@@ -73,15 +73,6 @@ body{
     
 }
 
-button{
-    width: 100%;
-    margin: 5%;
-    border-radius: 5px;
-    outline: none;
-    border: 1px  solid black;
-    font-size: 100%;
-}
-
 button:hover{
     cursor: pointer;
 }
@@ -95,10 +86,22 @@ button:active{
 
 .button-menos{
     box-shadow: -3px 3px 2px rgba(207, 207, 207, 0.75), -5px 5px 0px black;
+    width: 100%;
+    margin: 5%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px  solid black;
+    font-size: 100%;
 }
 
 .button-mais{
     box-shadow: -3px 3px 2px rgba(185, 185, 185, 0.75), -5px 5px 0px black;
+    width: 100%;
+    margin: 5%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px  solid black;
+    font-size: 100%;
 }
 
 .id-pokemon{
@@ -108,3 +111,29 @@ button:active{
 .nome-pokemon{
     text-transform: capitalize
 }
+
+
+
+.container-sugestao{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    margin-left: 7%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: -3px 3px 2px rgb(173, 173, 173), -5px 5px 0px black;
+    padding: 3%;
+}
+
+button{
+    cursor: pointer;
+}
+
+.sugestao{
+    margin-bottom: 20%;
+    width: 100px;
+    height: 80px;
+}
+
+
