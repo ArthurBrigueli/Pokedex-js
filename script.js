@@ -17,8 +17,7 @@ const getPokemon = async(pokemon) => {
     if(res.status === 404){
         nome_pokemon.innerHTML ='Invalido'
         img.src = 'https://acegif.com/wp-content/uploads/gif/thinking-emoji-30.gif'
-        id_pokemon.innerHTML = 0
-        click = 0
+        id_pokemon.innerHTML = `${0} -`
     }
 
     const data = await res.json()
@@ -39,7 +38,7 @@ const showData = async (pokemon) => {
     const data = await getPokemon(pokemon)
     click = data.id
     nome_pokemon.innerHTML = `${data.name}`
-    id_pokemon.innerHTML = `${data.id}`
+    id_pokemon.innerHTML = `${data.id} -`
     const pokeimg = `${data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']}`
     img.src = pokeimg
 }
