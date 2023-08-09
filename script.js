@@ -68,6 +68,5 @@ botao_menos.addEventListener('click', (e)=>{
     if(click > 1){
         click -= 1
         showData(click)
-    }
-    
+    }    
 })
